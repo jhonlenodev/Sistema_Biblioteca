@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Livros</h1>
+    <ul>
+        {% for livro in livros %}
+        <a href="{% url 'detalhes' livro.id %}"><li>{{ livro.livro }}</li></a>
+        {% endfor %}
+    </ul>
+{% endblock %}
